@@ -1,0 +1,12 @@
+[Unit]
+Description=RabbitMQ Exporter
+Documentation=https://github.com/kbudde/rabbitmq_exporter
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/rabbitmq_exporter -config-file=/etc/rabbitmq_exporter/config.json
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,22 @@
+{
+    "rabbit_url": "http://127.0.0.1:15672",
+    "rabbit_user": "guest",
+    "rabbit_pass": "guest",
+    "publish_port": "9419",
+    "publish_addr": "",
+    "output_format": "TTY",
+    "exlude_metrics": [],
+    "include_queues": ".*",
+    "skip_queues": "^$",
+    "skip_vhost": "^$",
+    "include_vhost": ".*",
+    "rabbit_capabilities": "bert",
+    "enabled_exporters": [
+        "exchange",
+        "node",
+        "overview",
+        "queue"
+    ],
+    "timeout": 30,
+    "max_queues": 0
+}
