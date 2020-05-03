@@ -33,4 +33,4 @@ WORKDIR /root
 RUN tar cvzf /root/rpmbuild/SOURCES/rabbitmq_exporter-2020.1.tar.gz rabbitmq_exporter-2020.1/
 
 WORKDIR /root/rpmbuild
-RUN rpmbuild -ba SPECS/rabbitmq-exporter.spec
+RUN rpmbuild -ba SPECS/rabbitmq_exporter.spec
