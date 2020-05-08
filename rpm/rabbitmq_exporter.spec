@@ -33,8 +33,13 @@ cp config.json %{buildroot}/etc/rabbitmq_exporter/
 cp rabbitmq_exporter.service %{buildroot}/usr/lib/systemd/system/
 
 %post
-%systemd_post rabbitmq_exporter.service
+%systemd_post rabbitmq_exporter
 
+%preun
+%systemd_preun rabbitmq_exporter
+
+%postun
+%systemd_postun_with_restart rabbitmq_exporter
 
 %files
 /usr/bin/rabbitmq_exporter
